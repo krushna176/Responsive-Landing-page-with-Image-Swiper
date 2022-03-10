@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: black;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+
+/* holder */
+.holder{
+    width: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Title section */
+.title{
+    height: 180px;
+    position:absolute;
+    width: 98%;
+    background-image: url('Images/Background.jpg');
+    border: solid 2px black;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    color: #fff;
+    
+}
+/* swiper */
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-size: cover;
+  width: 180px;
+  height: 300px;
+}
+.swiper-slide img {
+  width: 100%;
+}
+/* main Section */
+.flex{
+    display: flex;
+}
+.items-center{
+    align-items: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.btn{
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    background: black;
+    color: wheat;
+    border-radius: 15px;
+    transition: all .3s ease;
+}
+
+.btn:hover{
+    background: var(--primary);
+    color: var(--secondary);
+}
+
+.flex-1{
+    flex: 1;
+}
+.justify-center{
+    justify-content: center;
+}
+.main{
+    height: 100%;
+    margin: 60px;
+    position: relative;
+    margin-top:100px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: solid 2px black;
+    z-index: 1;
+}
+.main .right h1{
+   text-align: center;
+}
+.main .right p{
+    line-height: 1.9;
+    margin-bottom: 2rem;
+}
+@media screen and (max-width: 960px) {
+    .flex{
+        display: block;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+        
+    }
+    .main .left{
+        align-items: center;
+        justify-content: center;
+        display: block;
+    }
+    .main .right{
+      text-align: center;
+    }
+    .main .right h1{
+        font-size: 20px;
+    }
+    .btn{
+        display: block;
+        align-self: center;
+        margin-left: 40%;
+    }
+    .right .flex-1{
+        align-items: center;
+    }
+    .main{
+        margin-top: 50px;
+    }
+    
+}
+@media screen and (max-width: 450px){
+    .btn{
+      margin-left: 25%;
+    }  
+}
+
+/* feature section */
+.container{
+    margin: 20px;
+    margin-top: 0;
+    position: relative;
+
+  }
+  
+  .details{
+    text-align: center;
+  }
+  
+  
+  .main-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: solid 2px black;
+    margin: 60px;
+    margin-top: 0;
+    border-radius: 50px;
+  }
+  
+  .box{
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    padding: 40px 10px;
+    position: relative;
+    /* z-index: 2; */
+    border-radius: 5px;
+  
+  }
+  .box > * {
+    position: relative;
+    /* z-index: 2; */
+    color: black;
+  }
+  
+  
+  
+  .box .icon{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: wheat;
+    border: solid 2px black;
+    display: inline-block;
+  }
+  
+ 
+  
+  
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    z-index: 2;
+    top: 80px;
+    left: -100%;
+    background: black;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    color: white;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}

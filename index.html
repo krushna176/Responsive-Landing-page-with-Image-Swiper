@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Invitation</title>
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="Images/Logo.png"></div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </nav>
+      <div class="holder">
+        <div class="title">
+            <h2>Digital Card Details</h2>
+        </div>
+        
+        <div class="main flex items-center justify-between">
+          <div class="swiper mySwiper left flex-1 flex justify-center">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="Images/Page1.jpg"></div>
+              <div class="swiper-slide"><img src="Images/Page2.jpg"></div>
+              <div class="swiper-slide"><img src="Images/Page3.jpg"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+            <div class="right flex-1">
+                <h1>Card Title</span></h1>
+                <p>Donec eu ornare mi. Sed finibus 
+                <span>condimentum mauris, ut dictum eros</span>    
+                <span>maximus vitae. Nullam</span>
+                <span>condimentum tortor ac elit feugiat</span>  
+                <span>iaculis. Aenean mauris nisl, blandit</span>  </p>
+                    <button class="btn">Try This Card</button>
+            </div>
+        </div>
+      </div>
+   <div class="container">
+    <div class="details">
+      <h2>Features</h2>
+    </div>
+    <div class="main-box">
+      <div class="box">
+        <div class="icon">
+        </div>
+        <p>Create your card
+            in just 5 mins</p>
+      </div>
+      <div class="box">
+        <div class="icon">
+        </div>
+        <p>Customize the Text
+            with "Edit this Page" Option</p>
+      </div>
+      <div class="box">
+        <div class="icon">
+        </div>
+        <p>Editing is available
+            after purchase also.</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 20,
+          stretch: 0,
+          depth: 700,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+</script>
+
+</body>
+</html>
